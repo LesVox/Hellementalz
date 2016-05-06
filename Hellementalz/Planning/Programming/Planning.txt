@@ -1,7 +1,12 @@
 MVP
---
-
-
-
-
-------
+   Spells
+      Jab
+      2-hand push
+   Gesture tracking
+      Jab
+      2-hand push
+   Target
+   VR support
+Stage 2
+   Target can attack
+   Defend (create wall)
