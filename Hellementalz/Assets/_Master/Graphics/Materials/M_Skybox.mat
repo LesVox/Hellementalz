@@ -102,7 +102,7 @@ Material:
       data:
         first:
           name: _SunSize
-        second: 0.07
+        second: 0.05
       data:
         first:
           name: _AtmosphereThickness

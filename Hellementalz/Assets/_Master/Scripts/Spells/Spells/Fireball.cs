@@ -23,7 +23,7 @@ public class Fireball : MonoBehaviour
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
-        gameObject.SetActive(false);
+//        gameObject.SetActive(false);
         
         AssertParams();
     }
@@ -54,7 +54,7 @@ public class Fireball : MonoBehaviour
         HP hp = col.GetComponent<HP>();
         if (hp != null)
         {
-            Destroy(gameObject);
+//            Destroy(gameObject);
             hp.DealDamage(m_damage);
         }
     }
