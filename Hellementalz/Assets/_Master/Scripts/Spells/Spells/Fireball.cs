@@ -40,7 +40,7 @@ public class Fireball : MonoBehaviour
     {
         if (Vector3.SqrMagnitude(m_startPosition - m_rigidbody.position) > m_maxRange * m_maxRange)
         {
-            m_rigidbody.useGravity = true;
+            //m_rigidbody.useGravity = true;
         }
 
         if (m_rigidbody.position.y < m_startPosition.y - 100)
