@@ -11,8 +11,7 @@ public class CollideExplosion : MonoBehaviour {
 	private GameObject explosionObject;
 
 	void Start(){
-		explosionObject = (GameObject)Instantiate(explosionPrefab,transform.position, Quaternion.identity);
-		explosionObject.SetActive (false);
+		
 	}
 
 	void AddExplosionForce(float radius, float power){
@@ -34,19 +33,22 @@ public class CollideExplosion : MonoBehaviour {
 
 		if (((1<<col.gameObject.layer) & hitLayer) != 0) {
 
-			HP hp = col.GetComponent<HP>();
+            explosionObject = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+            HP hp = col.GetComponent<HP>();
 			if (hp != null)
 			{
 				hp.DealDamage(1);
 			}
 
+            /*
 			if (explosionObject != null) {
 				explosionObject.SetActive (false);
 				explosionObject.transform.position = transform.position;
 				explosionObject.SetActive (true);
 				gameObject.SetActive (false);
 			}
-
+            */
 		}
 	}
 
