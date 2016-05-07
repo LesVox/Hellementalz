@@ -61,7 +61,7 @@ ModelImporter:
     4300014: Stone069
     4300016: Stone070
     4300018: Stone071
-    7400000: Take 001
+    7400000: RockWall_Down
     9500000: //RootNode
     13700000: Stone062
     13700002: Stone063
@@ -93,7 +93,81 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RockWall_Down
+      takeName: Take 001
+      firstFrame: 12
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jnt_Ref
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone01
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone02
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone03
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone04
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone05
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone06
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone07
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone08
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone09
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone010
+        weight: 1
+      - path: Stone062
+        weight: 1
+      - path: Stone063
+        weight: 1
+      - path: Stone064
+        weight: 1
+      - path: Stone065
+        weight: 1
+      - path: Stone066
+        weight: 1
+      - path: Stone067
+        weight: 1
+      - path: Stone068
+        weight: 1
+      - path: Stone069
+        weight: 1
+      - path: Stone070
+        weight: 1
+      - path: Stone071
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
