@@ -1,12 +1,13 @@
 MVP
-   Spells
+   Spells - Robbin
       Jab
       2-hand push
-   Gesture tracking
+   Gesture tracking - Jens
       Jab
       2-hand push
    Target
-   VR support
+   VR support - Done
+   HP
 Stage 2
    Target can attack
    Defend (create wall)
