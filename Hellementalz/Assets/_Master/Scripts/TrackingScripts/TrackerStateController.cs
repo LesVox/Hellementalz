@@ -4,9 +4,9 @@ using System.Collections;
 public class TrackerStateController : MonoBehaviour {
 
     [SerializeField]
-    ControllerTracker Controller1;
+    ControllerTracker LeftController;
     [SerializeField]
-    ControllerTracker Controller2;
+    ControllerTracker RightController;
     ControllerTracker ActiveHand = null;
     ControllerTracker OffHand = null;
 
@@ -25,18 +25,18 @@ public class TrackerStateController : MonoBehaviour {
 
     public float WallOriginOffset = 1;
     public float WallDemand = .1f;
-    public float WallSqr(ControllerTracker Controller)
+    public float WallVY(ControllerTracker Controller)
     {
         if (Controller == null)
             return 0;
-        return new Vector3(0, Controller.TotalMoveV.y, 0).sqrMagnitude;
+        return Controller.TotalMoveV.y;
     }
 
     #endregion
 
     void Update ()
     {
-	    if(Controller1.IsTracking || Controller2.IsTracking)
+	    if(LeftController.IsTracking || RightController.IsTracking)
         {
             DetermineSpell();
            // Debug.Log("Tracking is working");
@@ -48,15 +48,15 @@ public class TrackerStateController : MonoBehaviour {
 
     void DetermineHand()
     {
-        if (Controller1.IsTracking && Controller1.TotalMoveSqr > Controller2.TotalMoveSqr)
+        if (LeftController.IsTracking && LeftController.TotalMoveSqr > RightController.TotalMoveSqr)
         {
-            ActiveHand = Controller1;
-            OffHand = Controller2;
+            ActiveHand = LeftController;
+            OffHand = RightController;
         }
-        if (Controller2.IsTracking && Controller1.TotalMoveSqr < Controller2.TotalMoveSqr)
+        if (RightController.IsTracking && LeftController.TotalMoveSqr < RightController.TotalMoveSqr)
         {
-            ActiveHand = Controller2;
-            OffHand = Controller1;
+            ActiveHand = RightController;
+            OffHand = LeftController;
         }
     }
     
@@ -66,38 +66,47 @@ public class TrackerStateController : MonoBehaviour {
         if (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f)
         {
             //Off cooldown, cast spell
-            
             DetermineHand();
 
             if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
             {
-                Debug.Log(2);
+                Vector3 direction = ActiveHand.TotalMoveV.normalized;
+                direction.y = 0;
+
                 if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
                 {
-                    Debug.Log(3);
-                    SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                    SpellFactory.CastStrongFireball(ActiveHand.transform.position, direction);
+                    OnSpellCast();
                 }
                 else
                 {
-                    Debug.Log(4);
-                    SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                    SpellFactory.CastLightFireball(ActiveHand.transform.position, direction);
+                    OnSpellCast();
                 }
             }
 
-            SpellCooldown = 0;
-
-            if (WallSqr(ActiveHand) >= WallDemand && WallSqr(OffHand) >= WallDemand / 2)
+            if (WallVY(ActiveHand) >= WallDemand && WallVY(OffHand) >= WallDemand / 2)
             {
-                Vector3 Offset = Vector3.Cross(ActiveHand.transform.position - OffHand.transform.position, Vector3.down).normalized;
+                Vector3 Offset = Vector3.Cross(LeftController.transform.position - RightController.transform.position, Vector3.down).normalized;
                 Vector3 OriginPosition = ActiveHand.transform.position - OffHand.transform.position;
                 OriginPosition.x /= 2;
                 OriginPosition.y /= 2;
                 
                 SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset));
+
+                OnSpellCast();
             }
             
 
         }
 
+    }
+
+    private void OnSpellCast()
+    {
+        SpellCooldown = 0;
+
+        LeftController.IsTracking = false;
+        RightController.IsTracking = false;
     }
 }
