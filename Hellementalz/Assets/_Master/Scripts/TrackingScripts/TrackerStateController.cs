@@ -23,6 +23,7 @@ public class TrackerStateController : MonoBehaviour {
         return new Vector3(Controller.TotalMoveV.x, 0, Controller.TotalMoveV.z).sqrMagnitude;
     }
 
+    public float WallOriginOffset = 1;
     public float WallDemand = .1f;
     public float WallSqr(ControllerTracker Controller)
     {
@@ -82,14 +83,19 @@ public class TrackerStateController : MonoBehaviour {
                     SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
                 }
             }
+
             SpellCooldown = 0;
 
             if (WallSqr(ActiveHand) >= WallDemand && WallSqr(OffHand) >= WallDemand / 2)
             {
-                //SpellFactory.CastWall()
+                Vector3 Offset = Vector3.Cross(ActiveHand.transform.position - OffHand.transform.position, Vector3.down).normalized;
+                Vector3 OriginPosition = ActiveHand.transform.position - OffHand.transform.position;
+                OriginPosition.x /= 2;
+                OriginPosition.y /= 2;
+                
+                SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset));
             }
-
-            SpellCooldown = 0;
+            
 
         }
 
