@@ -35,11 +35,13 @@ public class CollideExplosion : MonoBehaviour {
 
             explosionObject = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-            HP hp = col.GetComponent<HP>();
-			if (hp != null)
-			{
-				hp.DealDamage(1);
-			}
+//            HP hp = col.GetComponent<HP>();
+//			if (hp != null)
+//			{
+//				hp.DealDamage(1);
+//			}
+//
+			Destroy (gameObject);
 
             /*
 			if (explosionObject != null) {
