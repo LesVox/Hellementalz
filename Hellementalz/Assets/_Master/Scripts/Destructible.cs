@@ -19,6 +19,7 @@ public class Destructible : MonoBehaviour {
 
 	void Destruction(){
 		gameObject.SetActive (false);
+		destroyedObjectPrefab.transform.localScale = gameObject.transform.localScale;
 		destroyedObjectPrefab.SetActive (true);
 	}
 }
