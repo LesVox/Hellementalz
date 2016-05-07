@@ -48,6 +48,18 @@ public class SpellFactory : MonoBehaviour
     }
 
     /// <summary>
+    /// Spawns a wall at the given position
+    /// </summary>
+    /// <param name="origin">The position of the wall</param>
+    public static void CastWall(Vector3 origin)
+    {
+        GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.EarthPillar));
+
+        Wall wall = newObject.GetComponent<Wall>();
+        wall.SpawnWall(origin);
+    }
+
+    /// <summary>
     /// Casts a fireball in a given direction
     /// </summary>
     /// <param name="origin">The start position of the fireball</param>
