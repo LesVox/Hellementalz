@@ -24,8 +24,7 @@ public class SpellFactory : MonoBehaviour
 
     private static SpellFactory Instance;
 
-    private float SpellCooldown = 0;
-    private float SpellCooldownMax = .5f;
+    
 
     /// <summary>
     /// Casts a light fireball in a given direction
@@ -48,26 +47,32 @@ public class SpellFactory : MonoBehaviour
     }
 
     /// <summary>
+    /// Spawns a wall at the given position
+    /// </summary>
+    /// <param name="origin">The position of the wall</param>
+    public static void CastWall(Vector3 origin)
+    {
+        GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.EarthPillar));
+
+        Wall wall = newObject.GetComponent<Wall>();
+        wall.SpawnWall(origin);
+    }
+
+    /// <summary>
     /// Casts a fireball in a given direction
     /// </summary>
     /// <param name="origin">The start position of the fireball</param>
     /// <param name="direction">The direction of the fireball</param>
     private void CastFireball(GameObject prefab, Vector3 origin, Vector3 direction)
     {
-        Debug.Log("Cast fireball: " + (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f));
-        if (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f)
-        {
-            //Off cooldown, cast spell
-            SpellCooldown = 0;
+        AssertInstance();
 
-            AssertInstance();
+        GameObject newObject = Instantiate<GameObject>(prefab);
+        newObject.name = prefab.name;
 
-            GameObject newObject = Instantiate<GameObject>(prefab);
-            newObject.name = prefab.name;
-
-            Fireball fireballScript = newObject.GetComponent<Fireball>();
-            fireballScript.CastFireball(origin, direction);
-        }
+        Fireball fireballScript = newObject.GetComponent<Fireball>();
+        fireballScript.CastFireball(origin, direction);
+            
     }
 
     void Awake()
@@ -81,11 +86,6 @@ public class SpellFactory : MonoBehaviour
         Instance = this;
     }
 
-    void Update()
-    {
-        if (SpellCooldown > -0.0001f)
-            SpellCooldown += Time.deltaTime;
-    }
     
     /// <summary>
     /// Substitute to using a dictionary. Returns a prefab from a given spell type.
