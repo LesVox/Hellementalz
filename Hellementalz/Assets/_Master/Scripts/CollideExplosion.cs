@@ -29,12 +29,19 @@ public class CollideExplosion : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 
-		explosionObject.SetActive(false);
-		explosionObject.transform.position = transform.position;
-		explosionObject.SetActive(true);
-		gameObject.SetActive(false);
-		AddExplosionForce (explosionRadius, explosionPower);
+		HP hp = col.GetComponent<HP>();
+		if (hp != null)
+		{
+			hp.DealDamage(1);
+		}
 
+		if (((1<<col.gameObject.layer) & hitLayer) != 0) {
+			explosionObject.SetActive (false);
+			explosionObject.transform.position = transform.position;
+			explosionObject.SetActive (true);
+			gameObject.SetActive (false);
+			AddExplosionForce (explosionRadius, explosionPower);
+		}
 	}
 
 }

@@ -23,6 +23,10 @@ public class HP : MonoBehaviour
         AssertParams();
     }
 
+	public int GetHealth(){
+		return m_currentHp;
+	}
+
     private void AssertParams()
     {
         Debug.Assert(m_maxHp > 0, "Max HP is not positive.");
