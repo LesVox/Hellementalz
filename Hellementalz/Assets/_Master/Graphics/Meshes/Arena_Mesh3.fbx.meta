@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: bb1583499fb807241a229ac405aaa2dc
+timeCreated: 1462647475
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Stone01_02
+    100004: Stone01_03
+    100006: Stone01_04
+    100008: Stone02_02
+    100010: Stone02_03
+    100012: Stone02_04
+    100014: Stone02_05
+    100016: Stone02_06
+    100018: Stone02_07
+    100020: Stone03_02
+    100022: Stone03_03
+    100024: Stone03_04
+    100026: Stone03_05
+    100028: Stone03_06
+    100030: Stone03_07
+    100032: Stone05_010
+    100034: Stone05_011
+    100036: Stone05_012
+    100038: Stone05_013
+    100040: Stone05_02
+    100042: Stone05_03
+    100044: Stone05_04
+    100046: Stone05_05
+    100048: Stone05_06
+    100050: Stone05_07
+    100052: Stone05_08
+    100054: Stone05_09
+    400000: //RootNode
+    400002: Stone01_02
+    400004: Stone01_03
+    400006: Stone01_04
+    400008: Stone02_02
+    400010: Stone02_03
+    400012: Stone02_04
+    400014: Stone02_05
+    400016: Stone02_06
+    400018: Stone02_07
+    400020: Stone03_02
+    400022: Stone03_03
+    400024: Stone03_04
+    400026: Stone03_05
+    400028: Stone03_06
+    400030: Stone03_07
+    400032: Stone05_010
+    400034: Stone05_011
+    400036: Stone05_012
+    400038: Stone05_013
+    400040: Stone05_02
+    400042: Stone05_03
+    400044: Stone05_04
+    400046: Stone05_05
+    400048: Stone05_06
+    400050: Stone05_07
+    400052: Stone05_08
+    400054: Stone05_09
+    2300000: Stone01_02
+    2300002: Stone01_03
+    2300004: Stone01_04
+    2300006: Stone02_02
+    2300008: Stone02_03
+    2300010: Stone02_04
+    2300012: Stone02_05
+    2300014: Stone02_06
+    2300016: Stone02_07
+    2300018: Stone03_02
+    2300020: Stone03_03
+    2300022: Stone03_04
+    2300024: Stone03_05
+    2300026: Stone03_06
+    2300028: Stone03_07
+    2300030: Stone05_010
+    2300032: Stone05_011
+    2300034: Stone05_012
+    2300036: Stone05_013
+    2300038: Stone05_02
+    2300040: Stone05_03
+    2300042: Stone05_04
+    2300044: Stone05_05
+    2300046: Stone05_06
+    2300048: Stone05_07
+    2300050: Stone05_08
+    2300052: Stone05_09
+    3300000: Stone01_02
+    3300002: Stone01_03
+    3300004: Stone01_04
+    3300006: Stone02_02
+    3300008: Stone02_03
+    3300010: Stone02_04
+    3300012: Stone02_05
+    3300014: Stone02_06
+    3300016: Stone02_07
+    3300018: Stone03_02
+    3300020: Stone03_03
+    3300022: Stone03_04
+    3300024: Stone03_05
+    3300026: Stone03_06
+    3300028: Stone03_07
+    3300030: Stone05_010
+    3300032: Stone05_011
+    3300034: Stone05_012
+    3300036: Stone05_013
+    3300038: Stone05_02
+    3300040: Stone05_03
+    3300042: Stone05_04
+    3300044: Stone05_05
+    3300046: Stone05_06
+    3300048: Stone05_07
+    3300050: Stone05_08
+    3300052: Stone05_09
+    4300000: Stone05_02
+    4300002: Stone05_03
+    4300004: Stone05_04
+    4300006: Stone05_05
+    4300008: Stone05_06
+    4300010: Stone05_07
+    4300012: Stone05_08
+    4300014: Stone01_02
+    4300016: Stone03_02
+    4300018: Stone02_02
+    4300020: Stone02_03
+    4300022: Stone03_03
+    4300024: Stone02_04
+    4300026: Stone02_05
+    4300028: Stone05_09
+    4300030: Stone05_010
+    4300032: Stone01_03
+    4300034: Stone02_06
+    4300036: Stone05_011
+    4300038: Stone03_04
+    4300040: Stone03_05
+    4300042: Stone02_07
+    4300044: Stone01_04
+    4300046: Stone05_012
+    4300048: Stone03_06
+    4300050: Stone03_07
+    4300052: Stone05_013
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
