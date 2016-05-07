@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 58451e944ad4b544d9c6153ba1da853c
+timeCreated: 1462633102
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCylinder2
+    100004: Pebble_Pebble11
+    100006: Pebble_Pebble12
+    100008: Pebble_Pebble13
+    100010: Stone011
+    100012: Stone012
+    100014: Stone013
+    100016: Stone014
+    100018: Stone015
+    100020: Stone016
+    100022: Stone017
+    100024: Stone018
+    100026: Stone019
+    100028: Stone020
+    100030: Stone021
+    100032: Stone022
+    100034: Stone023
+    100036: Stone024
+    100038: Stone025
+    100040: Stone026
+    100042: Stone027
+    100044: Stone028
+    100046: Stone06
+    100048: Stone09
+    400000: //RootNode
+    400002: pCylinder2
+    400004: Pebble_Pebble11
+    400006: Pebble_Pebble12
+    400008: Pebble_Pebble13
+    400010: Stone011
+    400012: Stone012
+    400014: Stone013
+    400016: Stone014
+    400018: Stone015
+    400020: Stone016
+    400022: Stone017
+    400024: Stone018
+    400026: Stone019
+    400028: Stone020
+    400030: Stone021
+    400032: Stone022
+    400034: Stone023
+    400036: Stone024
+    400038: Stone025
+    400040: Stone026
+    400042: Stone027
+    400044: Stone028
+    400046: Stone06
+    400048: Stone09
+    2300000: pCylinder2
+    2300002: Pebble_Pebble11
+    2300004: Pebble_Pebble12
+    2300006: Pebble_Pebble13
+    2300008: Stone011
+    2300010: Stone012
+    2300012: Stone013
+    2300014: Stone014
+    2300016: Stone015
+    2300018: Stone016
+    2300020: Stone017
+    2300022: Stone018
+    2300024: Stone019
+    2300026: Stone020
+    2300028: Stone021
+    2300030: Stone022
+    2300032: Stone023
+    2300034: Stone024
+    2300036: Stone025
+    2300038: Stone026
+    2300040: Stone027
+    2300042: Stone028
+    2300044: Stone06
+    2300046: Stone09
+    3300000: pCylinder2
+    3300002: Pebble_Pebble11
+    3300004: Pebble_Pebble12
+    3300006: Pebble_Pebble13
+    3300008: Stone011
+    3300010: Stone012
+    3300012: Stone013
+    3300014: Stone014
+    3300016: Stone015
+    3300018: Stone016
+    3300020: Stone017
+    3300022: Stone018
+    3300024: Stone019
+    3300026: Stone020
+    3300028: Stone021
+    3300030: Stone022
+    3300032: Stone023
+    3300034: Stone024
+    3300036: Stone025
+    3300038: Stone026
+    3300040: Stone027
+    3300042: Stone028
+    3300044: Stone06
+    3300046: Stone09
+    4300000: Pebble_Pebble11
+    4300002: Stone06
+    4300004: Stone09
+    4300006: pCylinder2
+    4300008: Stone011
+    4300010: Stone012
+    4300012: Stone013
+    4300014: Stone014
+    4300016: Stone015
+    4300018: Stone016
+    4300020: Stone017
+    4300022: Stone018
+    4300024: Stone019
+    4300026: Stone020
+    4300028: Stone021
+    4300030: Stone022
+    4300032: Stone023
+    4300034: Stone024
+    4300036: Stone025
+    4300038: Stone026
+    4300040: Stone027
+    4300042: Stone028
+    4300044: Pebble_Pebble12
+    4300046: Pebble_Pebble13
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
