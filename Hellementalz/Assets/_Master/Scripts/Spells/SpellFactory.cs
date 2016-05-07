@@ -6,7 +6,8 @@ public class SpellFactory : MonoBehaviour
     public enum SpellTypes
     {
         LightFireball,
-        StrongFireball
+        StrongFireball,
+        EarthPillar
     }
 
     [System.Serializable]
@@ -16,10 +17,15 @@ public class SpellFactory : MonoBehaviour
         public GameObject spellPrefab;
     }
     
+    
+
     [SerializeField]
     private SpawnableSpell[] m_spellPrefabs;
 
     private static SpellFactory Instance;
+
+    private float SpellCooldown = 0;
+    private float SpellCooldownMax = .5f;
 
     /// <summary>
     /// Casts a light fireball in a given direction
@@ -48,13 +54,20 @@ public class SpellFactory : MonoBehaviour
     /// <param name="direction">The direction of the fireball</param>
     private void CastFireball(GameObject prefab, Vector3 origin, Vector3 direction)
     {
-        AssertInstance();
+        Debug.Log("Cast fireball: " + (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f));
+        if (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f)
+        {
+            //Off cooldown, cast spell
+            SpellCooldown = 0;
 
-        GameObject newObject = Instantiate<GameObject>(prefab);
-        newObject.name = prefab.name;
+            AssertInstance();
 
-        Fireball fireballScript = newObject.GetComponent<Fireball>();
-        fireballScript.CastFireball(Vector3.zero, Vector3.forward);
+            GameObject newObject = Instantiate<GameObject>(prefab);
+            newObject.name = prefab.name;
+
+            Fireball fireballScript = newObject.GetComponent<Fireball>();
+            fireballScript.CastFireball(origin, direction);
+        }
     }
 
     void Awake()
@@ -66,6 +79,12 @@ public class SpellFactory : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    void Update()
+    {
+        if (SpellCooldown > -0.0001f)
+            SpellCooldown += Time.deltaTime;
     }
     
     /// <summary>

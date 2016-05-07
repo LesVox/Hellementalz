@@ -24,13 +24,15 @@ public class ControllerTracker : MonoBehaviour {
 
     void Update ()
     {
+        Debug.Log("Controller index " + MyIndex + " down: " + SteamVR_Controller.Input(MyIndex).GetPressDown(SteamVR_Controller.ButtonMask.Trigger));
         if (SteamVR_Controller.Input(MyIndex).GetPressDown(SteamVR_Controller.ButtonMask.Trigger) && IsTracking == false)
         {
-            TrackerActivation();
+            IsTracking = true;
             OriginalPos = gameObject.transform.position;
         }
         if (IsTracking)
         {
+            Debug.Log("is tracking");
             TrackerCount += Time.deltaTime;
             TrackMovement();
         }
@@ -40,6 +42,7 @@ public class ControllerTracker : MonoBehaviour {
             TotalMoveV = new Vector3(0, 0, 0);
             TotalMoveSqr = 0;
             OriginalPos = new Vector3(0, 0, 0);
+            TrackerCount = 0;
         }
 	}
 
