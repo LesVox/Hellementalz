@@ -70,15 +70,18 @@ public class TrackerStateController : MonoBehaviour {
 
             if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
             {
+                Vector3 direction = ActiveHand.TotalMoveV.normalized;
+                direction.y = 0;
+
                 if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
                 {
-                    SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
-                    SpellCooldown = 0;
+                    SpellFactory.CastStrongFireball(ActiveHand.transform.position, direction);
+                    OnSpellCast();
                 }
                 else
                 {
-                    SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
-                    SpellCooldown = 0;
+                    SpellFactory.CastLightFireball(ActiveHand.transform.position, direction);
+                    OnSpellCast();
                 }
             }
 
@@ -90,11 +93,20 @@ public class TrackerStateController : MonoBehaviour {
                 OriginPosition.y /= 2;
                 
                 SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset));
-                SpellCooldown = 0;
+
+                OnSpellCast();
             }
             
 
         }
 
+    }
+
+    private void OnSpellCast()
+    {
+        SpellCooldown = 0;
+
+        Controller1.IsTracking = false;
+        Controller2.IsTracking = false;
     }
 }

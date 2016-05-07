@@ -7,7 +7,7 @@ public class SpellFactory : MonoBehaviour
     {
         LightFireball,
         StrongFireball,
-        EarthPillar
+        Wall
     }
 
     [System.Serializable]
@@ -52,7 +52,7 @@ public class SpellFactory : MonoBehaviour
     /// <param name="origin">The position of the wall</param>
     public static void CastWall(Vector3 origin)
     {
-        GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.EarthPillar));
+        GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.Wall));
 
         Wall wall = newObject.GetComponent<Wall>();
         wall.SpawnWall(origin);
