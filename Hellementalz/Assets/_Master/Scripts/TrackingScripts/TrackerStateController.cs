@@ -10,6 +10,7 @@ public class TrackerStateController : MonoBehaviour {
     ControllerTracker ActiveHand = null;
     ControllerTracker OffHand = null;
 
+
     private float SpellCooldown = 0;
     private float SpellCooldownMax = .5f;
 
@@ -25,11 +26,11 @@ public class TrackerStateController : MonoBehaviour {
 
     public float WallOriginOffset = 1;
     public float WallDemand = .1f;
-    public float WallSqr(ControllerTracker Controller)
+    public float WallVY(ControllerTracker Controller)
     {
         if (Controller == null)
             return 0;
-        return new Vector3(0, Controller.TotalMoveV.y, 0).sqrMagnitude;
+        return Controller.TotalMoveV.y;
     }
 
     #endregion
@@ -39,7 +40,6 @@ public class TrackerStateController : MonoBehaviour {
 	    if(Controller1.IsTracking || Controller2.IsTracking)
         {
             DetermineSpell();
-           // Debug.Log("Tracking is working");
         }
 
         if (SpellCooldown > -0.0001f)
@@ -71,24 +71,21 @@ public class TrackerStateController : MonoBehaviour {
 
             if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
             {
-                Debug.Log(2);
                 if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
                 {
-                    Debug.Log(3);
                     SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
                 }
                 else
                 {
-                    Debug.Log(4);
                     SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
                 }
             }
 
             SpellCooldown = 0;
 
-            if (WallSqr(ActiveHand) >= WallDemand && WallSqr(OffHand) >= WallDemand / 2)
+            if (WallVY(ActiveHand) >= WallDemand && WallVY(OffHand) >= WallDemand / 2)
             {
-                Vector3 Offset = Vector3.Cross(ActiveHand.transform.position - OffHand.transform.position, Vector3.down).normalized;
+                Vector3 Offset = Vector3.Cross(Controller1.transform.position - Controller2.transform.position, Vector3.up).normalized;
                 Vector3 OriginPosition = ActiveHand.transform.position - OffHand.transform.position;
                 OriginPosition.x /= 2;
                 OriginPosition.y /= 2;
