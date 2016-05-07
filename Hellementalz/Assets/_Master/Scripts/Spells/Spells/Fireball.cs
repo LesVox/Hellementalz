@@ -54,7 +54,7 @@ public class Fireball : MonoBehaviour
         HP hp = col.GetComponent<HP>();
         if (hp != null)
         {
-            Destroy(gameObject);
+//            Destroy(gameObject);
             hp.DealDamage(m_damage);
         }
     }
