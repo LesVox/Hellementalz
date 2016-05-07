@@ -50,9 +50,9 @@ public class TrackerStateController : MonoBehaviour {
         {
             if(FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
             {
-                //TODO: Double Fireball
+                SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
             }
-            //TODO: Fireball
+            SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
         }
 
     }
