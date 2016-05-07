@@ -51,10 +51,11 @@ public class Fireball : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<Target>() != null)
+        HP hp = col.GetComponent<HP>();
+        if (hp != null)
         {
-            Debug.Log("Hit");
             Destroy(gameObject);
+            hp.DealDamage(m_damage);
         }
     }
 
