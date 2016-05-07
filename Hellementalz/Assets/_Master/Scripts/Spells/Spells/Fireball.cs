@@ -23,7 +23,7 @@ public class Fireball : MonoBehaviour
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody>();
-        gameObject.SetActive(false);
+//        gameObject.SetActive(false);
         
         AssertParams();
     }

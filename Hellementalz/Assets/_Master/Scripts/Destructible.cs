@@ -18,7 +18,13 @@ public class Destructible : MonoBehaviour {
 	}
 
 	void Destruction(){
-		gameObject.SetActive (false);
-		destroyedObjectPrefab.SetActive (true);
+		if (gameObject != null)
+			gameObject.SetActive (false);
+
+		if (destroyedObjectPrefab != null) {
+			destroyedObjectPrefab.transform.localScale = gameObject.transform.localScale;
+			destroyedObjectPrefab.transform.rotation = gameObject.transform.rotation;
+			destroyedObjectPrefab.SetActive (true);
+		}
 	}
 }

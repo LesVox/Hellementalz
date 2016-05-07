@@ -19,7 +19,12 @@ public class Launcher : MonoBehaviour {
 	}
 
 	void Shoot(){
-		fire.CastFireball (transform.position, transform.forward);
+		GameObject fireprefab = (GameObject)Instantiate(objectToLaunch, transform.position, Quaternion.identity);
+		fire = fireprefab.GetComponent<Fireball> ();
+
+		if (fire != null) {
+			fire.CastFireball (transform.position, transform.forward);
+		}
 	}
 	
 	// Update is called once per frame
