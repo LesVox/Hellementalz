@@ -41,7 +41,7 @@ public class CollideExplosion : MonoBehaviour {
 			{
 				hp.DealDamage(1);
 			}
-
+            Destroy(this.gameObject);
             /*
 			if (explosionObject != null) {
 				explosionObject.SetActive (false);

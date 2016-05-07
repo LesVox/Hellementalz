@@ -185,7 +185,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406648}
-  - 65: {fileID: 6587530}
   m_Layer: 0
   m_Name: Jnt_Root
   m_TagString: Untagged
@@ -294,7 +293,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443110}
-  m_Layer: 0
+  - 65: {fileID: 6559246}
+  m_Layer: 9
   m_Name: Jnt_Stone06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.460129, y: 0, z: -54.942474}
+  m_LocalPosition: {x: 1.2728882, y: 0.974103, z: -51.4825}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 438124}
@@ -719,18 +719,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 468416}
   m_RootOrder: 9
---- !u!65 &6587530
+--- !u!65 &6559246
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144838}
+  m_GameObject: {fileID: 171670}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 26, y: 25, z: 10}
-  m_Center: {x: 2.25, y: 0, z: -1}
+  m_Center: {x: -0.39, y: 4.55, z: -4.93}
 --- !u!82 &8225070
 AudioSource:
   m_ObjectHideFlags: 1
@@ -749,7 +749,7 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 2
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GO: {fileID: 182168}
-  TimeDelay: 1
+  TimeDelay: 1.25
 --- !u!114 &11479904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2755,7 +2755,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 4294966783
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
