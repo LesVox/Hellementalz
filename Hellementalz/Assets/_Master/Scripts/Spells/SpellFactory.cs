@@ -19,19 +19,16 @@ public class SpellFactory : MonoBehaviour
     [SerializeField]
     private SpawnableSpell[] m_spellPrefabs;
 
-    void Start()
-    {
-        CastStrongFireball(Vector3.zero, Vector3.forward);
-    }
+    private static SpellFactory Instance;
 
     /// <summary>
     /// Casts a light fireball in a given direction
     /// </summary>
     /// <param name="origin">The start position of the fireball</param>
     /// <param name="direction">The direction of the fireball</param>
-    public void CastLightFireball(Vector3 origin, Vector3 direction)
+    public static void CastLightFireball(Vector3 origin, Vector3 direction)
     {
-        CastFireball(GetPrefabFromSpellType(SpellTypes.LightFireball), origin, direction);
+        Instance.CastFireball(Instance.GetPrefabFromSpellType(SpellTypes.LightFireball), origin, direction);
     }
 
     /// <summary>
@@ -39,9 +36,9 @@ public class SpellFactory : MonoBehaviour
     /// </summary>
     /// <param name="origin">The start position of the fireball</param>
     /// <param name="direction">The direction of the fireball</param>
-    public void CastStrongFireball(Vector3 origin, Vector3 direction)
+    public static void CastStrongFireball(Vector3 origin, Vector3 direction)
     {
-        CastFireball(GetPrefabFromSpellType(SpellTypes.StrongFireball), origin, direction);
+        Instance.CastFireball(Instance.GetPrefabFromSpellType(SpellTypes.StrongFireball), origin, direction);
     }
 
     /// <summary>
@@ -51,6 +48,8 @@ public class SpellFactory : MonoBehaviour
     /// <param name="direction">The direction of the fireball</param>
     private void CastFireball(GameObject prefab, Vector3 origin, Vector3 direction)
     {
+        AssertInstance();
+
         GameObject newObject = Instantiate<GameObject>(prefab);
         newObject.name = prefab.name;
 
@@ -58,6 +57,17 @@ public class SpellFactory : MonoBehaviour
         fireballScript.CastFireball(Vector3.zero, Vector3.forward);
     }
 
+    void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("Multiple instances of SpellFactory found.");
+            return;
+        }
+
+        Instance = this;
+    }
+    
     /// <summary>
     /// Substitute to using a dictionary. Returns a prefab from a given spell type.
     /// </summary>
@@ -72,5 +82,13 @@ public class SpellFactory : MonoBehaviour
         }
 
         throw new System.Exception("Spell " + type + " not defined in spellPrefabs");
+    }
+
+    private void AssertInstance()
+    {
+        if (Instance == null)
+        {
+            throw new System.Exception("SpellFactory instance is null. Does the prefab exist in the scene?");
+        }
     }
 }

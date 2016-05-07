@@ -24,7 +24,7 @@ public class Fireball : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody>();
         gameObject.SetActive(false);
-
+        
         AssertParams();
     }
     
