@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Water
-  m_Shader: {fileID: 4800000, guid: 44abe7b6c3cd84246b9ac779307609c2, type: 3}
+  m_Name: M_Lava
+  m_Shader: {fileID: 4800000, guid: e4835b118f1fa8c48b934d4c69cd0fc7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -39,20 +39,6 @@ Material:
       data:
         first:
           name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _node_1897
-        second:
-          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Specular
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -94,30 +80,30 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Cloudtexture
+          name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+          m_Texture: {fileID: 2800000, guid: d0142c7b8d7d2d347bc2094861a76380, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _node_234
+          name: _GlossTexture
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: d0142c7b8d7d2d347bc2094861a76380, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _node_2194
+          name: _Flowmap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 170d97123361f5b44b7cbb50f204cfe7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _node_6344
+          name: _Normal
         second:
-          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+          m_Texture: {fileID: 2800000, guid: fb1c09146d7bbe742b59a983143f8fd0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -139,24 +125,8 @@ Material:
         second: 0.02
       data:
         first:
-          name: _DepthBlend
-        second: 0.4
-      data:
-        first:
-          name: _Opacity
-        second: 0.6
-      data:
-        first:
-          name: _WaveIntensity
-        second: 1.21
-      data:
-        first:
           name: _Gloss
-        second: 0
-      data:
-        first:
-          name: _OutlineWidth
-        second: 0.02
+        second: 0.4832794
       data:
         first:
           name: _ZWrite
@@ -191,12 +161,20 @@ Material:
         second: 0
       data:
         first:
-          name: _node_1552
-        second: 0.36
+          name: _DimensionShift
+        second: 0
       data:
         first:
-          name: _node_4238
-        second: -2.1
+          name: _FlowPower
+        second: 5
+      data:
+        first:
+          name: _FlowSpeed
+        second: 1
+      data:
+        first:
+          name: _EmissionIntensity
+        second: 1
     m_Colors:
       data:
         first:
@@ -208,5 +186,9 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Color_copy
-        second: {r: 0.5955882, g: 0.7489092, b: 1, a: 1}
+          name: _SecondaryColor
+        second: {r: 1, g: 0.1921907, b: 0.007352948, a: 1}
+      data:
+        first:
+          name: _PrimaryColor
+        second: {r: 1, g: 0.35172415, b: 0, a: 1}
