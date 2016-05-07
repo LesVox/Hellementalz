@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Water
-  m_Shader: {fileID: 4800000, guid: d800dae970deb0f46a5ec549dd97c44d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 44abe7b6c3cd84246b9ac779307609c2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
@@ -45,6 +45,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _node_1897
+        second:
+          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Specular
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
@@ -76,13 +90,6 @@ Material:
           name: _MetallicGlossMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _node_1897
-        second:
-          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -132,6 +139,26 @@ Material:
         second: 0.02
       data:
         first:
+          name: _DepthBlend
+        second: 0.4
+      data:
+        first:
+          name: _Opacity
+        second: 0.6
+      data:
+        first:
+          name: _WaveIntensity
+        second: 1.21
+      data:
+        first:
+          name: _Gloss
+        second: 0
+      data:
+        first:
+          name: _OutlineWidth
+        second: 0.02
+      data:
+        first:
           name: _ZWrite
         second: 1
       data:
@@ -164,14 +191,6 @@ Material:
         second: 0
       data:
         first:
-          name: _DepthBlend
-        second: 0.28
-      data:
-        first:
-          name: _Opacity
-        second: 0.7
-      data:
-        first:
           name: _node_1552
         second: 0.36
       data:
@@ -190,4 +209,4 @@ Material:
       data:
         first:
           name: _Color_copy
-        second: {r: 0.28627452, g: 0.5568628, b: 1, a: 1}
+        second: {r: 0.5955882, g: 0.7489092, b: 1, a: 1}
