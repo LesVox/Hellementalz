@@ -331,7 +331,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 107966, guid: aecfb6e5f7b4ead4789e267de568c6ad, type: 2}
   hitLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   explosionRadius: 5
   explosionPower: 300
 --- !u!135 &13592972
