@@ -12,8 +12,9 @@ GameObject:
   - 136: {fileID: 13690976}
   - 23: {fileID: 2349206}
   - 114: {fileID: 11425506}
+  - 114: {fileID: 11481910}
   m_Layer: 0
-  m_Name: EarthPillar
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +77,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHp: 2147483647
+--- !u!114 &11481910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c3423050237904da8e9b35cb2a128c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &13690976
 CapsuleCollider:
   m_ObjectHideFlags: 1
