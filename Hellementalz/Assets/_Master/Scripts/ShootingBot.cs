@@ -28,7 +28,7 @@ public class ShootingBot : MonoBehaviour
         {
             SetNewCooldown();
             Vector3 direction = (Camera.main.transform.position - transform.position).normalized;
-            SpellFactory.CastLightFireball(transform.position + direction, direction);
+            SpellFactory.CastLightFireball(transform.position + direction * 3, direction);
         }
 	}
 
