@@ -10,10 +10,11 @@ public class TrackerStateController : MonoBehaviour {
     ControllerTracker ActiveHand = null;
     ControllerTracker OffHand = null;
     #region Spells
-
-    public float FireballDemand = 1;
+    public float FireballDemand = .1f;
     public float FireballSqr(ControllerTracker Controller)
     {
+        if (Controller == null)
+            return 0;
         return new Vector3(Controller.TotalMoveV.x, 0, Controller.TotalMoveV.z).sqrMagnitude;
     }
 
@@ -21,9 +22,11 @@ public class TrackerStateController : MonoBehaviour {
 
 	void Update ()
     {
+        Debug.Log("Is tracking: " + (Controller1.IsTracking || Controller2.IsTracking));
 	    if(Controller1.IsTracking || Controller2.IsTracking)
         {
             DetermineSpell();
+           // Debug.Log("Tracking is working");
         }
 	}
 
@@ -45,14 +48,22 @@ public class TrackerStateController : MonoBehaviour {
     void DetermineSpell()
     {
         DetermineHand();
-                
-        if(FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
+        //Debug.Log("Active hand = " + ActiveHand);
+        //Debug.Log("FireballSqr = " + FireballSqr(ActiveHand));
+        Debug.Log(1);
+        if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
         {
-            if(FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
+            Debug.Log(2);
+            if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
             {
-                //TODO: Double Fireball
+                Debug.Log(3);
+                SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
             }
-            //TODO: Fireball
+            else
+            {
+                Debug.Log(4);
+                SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+            }
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ControllerTracker : MonoBehaviour {
 
@@ -16,29 +17,32 @@ public class ControllerTracker : MonoBehaviour {
     private float TrackerCountMax = 1;
 
     public Vector3 OriginalPos;
-    int MyIndex;
     public Vector3 TotalMoveV;
     public float TotalMoveSqr = 0;
 
+    private int MyIndex;
 
-	void Update ()
+    void Update ()
     {
-        if (SteamVR_Controller.Input(MyIndex).GetHairTriggerDown() && IsTracking == false)
+        Debug.Log("Controller index " + MyIndex + " down: " + SteamVR_Controller.Input(MyIndex).GetPressDown(SteamVR_Controller.ButtonMask.Trigger));
+        if (SteamVR_Controller.Input(MyIndex).GetPressDown(SteamVR_Controller.ButtonMask.Trigger) && IsTracking == false)
         {
-            TrackerActivation();
+            IsTracking = true;
             OriginalPos = gameObject.transform.position;
         }
         if (IsTracking)
         {
+            Debug.Log("is tracking");
             TrackerCount += Time.deltaTime;
             TrackMovement();
         }
-        if(SteamVR_Controller.Input(MyIndex).GetHairTriggerUp() || TrackerCount >= TrackerCountMax)
+        if(SteamVR_Controller.Input(MyIndex).GetPressUp(SteamVR_Controller.ButtonMask.Trigger) || TrackerCount >= TrackerCountMax)
         {
             IsTracking = false;
             TotalMoveV = new Vector3(0, 0, 0);
             TotalMoveSqr = 0;
             OriginalPos = new Vector3(0, 0, 0);
+            TrackerCount = 0;
         }
 	}
 
@@ -54,5 +58,10 @@ public class ControllerTracker : MonoBehaviour {
         IsTracking = true;
         yield return new WaitForSeconds(.5f);
     }
-
+    
+    public void SetDeviceIndex(int index)
+    {
+        if (Enum.IsDefined(typeof(SteamVR_TrackedObject.EIndex), index))
+            MyIndex = index;
+    }
 }
