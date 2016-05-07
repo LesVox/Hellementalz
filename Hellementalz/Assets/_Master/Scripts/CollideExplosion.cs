@@ -37,7 +37,7 @@ public class CollideExplosion : MonoBehaviour {
 			HP hp = col.GetComponent<HP>();
 			if (hp != null)
 			{
-				hp.DealDamage(1);
+				//hp.DealDamage(1);
 			}
 
 			if (explosionObject != null) {

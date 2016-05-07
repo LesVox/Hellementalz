@@ -6,7 +6,7 @@ public class HP : MonoBehaviour
     [SerializeField]
     int m_maxHp = 1;
 
-    private int m_currentHp;
+    protected int m_currentHp;
 
     public void DealDamage(int damage)
     {
@@ -16,10 +16,15 @@ public class HP : MonoBehaviour
 
         if (m_currentHp <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
 
         Debug.Log("HP: " + m_currentHp);
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
     }
 
     void Awake()
