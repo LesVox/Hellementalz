@@ -29,13 +29,14 @@ GameObject:
   - 54: {fileID: 5401780}
   - 135: {fileID: 13592972}
   - 114: {fileID: 11471338}
+  - 114: {fileID: 11446280}
   m_Layer: 0
   m_Name: Fire_Ball_Stylized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &151432
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.500723, y: 4.9493976, z: 9.505193}
+  m_LocalPosition: {x: 0, y: 4.9493976, z: -9.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433790}
@@ -317,6 +318,20 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11446280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f213c50ec204c7448f12db477b653c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 12.5
+  m_damage: 1
+  m_maxRange: 10
 --- !u!114 &11471338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +346,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 107966, guid: aecfb6e5f7b4ead4789e267de568c6ad, type: 2}
   hitLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967039
   explosionRadius: 5
   explosionPower: 300
 --- !u!135 &13592972
