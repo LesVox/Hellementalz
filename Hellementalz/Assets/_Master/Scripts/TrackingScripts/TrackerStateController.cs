@@ -66,7 +66,7 @@ public class TrackerStateController : MonoBehaviour {
         if (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f)
         {
             //Off cooldown, cast spell
-            
+            Debug.Log("1");
             DetermineHand();
 
             if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
@@ -76,15 +76,15 @@ public class TrackerStateController : MonoBehaviour {
                 {
                     Debug.Log(3);
                     SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                    SpellCooldown = 0;
                 }
                 else
                 {
                     Debug.Log(4);
                     SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                    SpellCooldown = 0;
                 }
             }
-
-            SpellCooldown = 0;
 
             if (WallSqr(ActiveHand) >= WallDemand && WallSqr(OffHand) >= WallDemand / 2)
             {
@@ -94,6 +94,7 @@ public class TrackerStateController : MonoBehaviour {
                 OriginPosition.y /= 2;
                 
                 SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset));
+                SpellCooldown = 0;
             }
             
 
