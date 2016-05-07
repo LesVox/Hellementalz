@@ -6,7 +6,8 @@ public class SpellFactory : MonoBehaviour
     public enum SpellTypes
     {
         LightFireball,
-        StrongFireball
+        StrongFireball,
+        EarthPillar
     }
 
     [System.Serializable]
@@ -44,6 +45,18 @@ public class SpellFactory : MonoBehaviour
     public static void CastStrongFireball(Vector3 origin, Vector3 direction)
     {
         Instance.CastFireball(Instance.GetPrefabFromSpellType(SpellTypes.StrongFireball), origin, direction);
+    }
+
+    /// <summary>
+    /// Spawns a wall at the given position
+    /// </summary>
+    /// <param name="origin">The position of the wall</param>
+    public static void CastWall(Vector3 origin)
+    {
+        GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.EarthPillar));
+
+        Wall wall = newObject.GetComponent<Wall>();
+        wall.SpawnWall(origin);
     }
 
     /// <summary>

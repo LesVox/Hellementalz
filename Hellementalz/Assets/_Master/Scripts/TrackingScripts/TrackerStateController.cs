@@ -9,7 +9,9 @@ public class TrackerStateController : MonoBehaviour {
     ControllerTracker Controller2;
     ControllerTracker ActiveHand = null;
     ControllerTracker OffHand = null;
+
     #region Spells
+
     public float FireballDemand = .1f;
     public float FireballSqr(ControllerTracker Controller)
     {
@@ -18,9 +20,17 @@ public class TrackerStateController : MonoBehaviour {
         return new Vector3(Controller.TotalMoveV.x, 0, Controller.TotalMoveV.z).sqrMagnitude;
     }
 
+    public float WallDemand = .1f;
+    public float WallSqr(ControllerTracker Controller)
+    {
+        if (Controller == null)
+            return 0;
+        return new Vector3(0, Controller.TotalMoveV.y, 0).sqrMagnitude;
+    }
+
     #endregion
 
-	void Update ()
+    void Update ()
     {
         Debug.Log("Is tracking: " + (Controller1.IsTracking || Controller2.IsTracking));
 	    if(Controller1.IsTracking || Controller2.IsTracking)
@@ -64,6 +74,11 @@ public class TrackerStateController : MonoBehaviour {
                 Debug.Log(4);
                 SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
             }
+        }
+
+        if(WallSqr(ActiveHand) >= WallDemand)
+        {
+            //TODO: Wall func
         }
 
     }

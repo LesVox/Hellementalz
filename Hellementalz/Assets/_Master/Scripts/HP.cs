@@ -14,6 +14,11 @@ public class HP : MonoBehaviour
 
         m_currentHp -= damage;
 
+        if (m_currentHp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         Debug.Log("HP: " + m_currentHp);
     }
 

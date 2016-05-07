@@ -13,12 +13,8 @@ public class Destructible : MonoBehaviour {
 		myHP = GetComponent<HP> ();
 	}
 
-	void Update(){
-		if (myHP != null) {
-			if (myHP.GetHealth() <= 0) {
-				Destruction ();
-			}
-		}
+	void OnDestroy(){
+		Destruction ();
 	}
 
 	void Destruction(){
