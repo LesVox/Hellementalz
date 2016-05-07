@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 4339917dc9db42c48855c53311ec60af
+guid: 455ce54d92260e143b3f4deb5151426b
+timeCreated: 1462625055
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -195,7 +197,6 @@ ModelImporter:
     4300070: Pebble_Pebble8
     4300072: Pebble_Pebble9
     4300074: Pebble_Pebble10
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -220,7 +221,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -254,7 +255,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
