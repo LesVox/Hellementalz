@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: a07a9bfe05089cd49a9aa4c259624835
+timeCreated: 1462643265
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Jnt_Ref
+    100002: Jnt_Root
+    100004: Jnt_Stone01
+    100006: Jnt_Stone010
+    100008: Jnt_Stone02
+    100010: Jnt_Stone03
+    100012: Jnt_Stone04
+    100014: Jnt_Stone05
+    100016: Jnt_Stone06
+    100018: Jnt_Stone07
+    100020: Jnt_Stone08
+    100022: Jnt_Stone09
+    100024: //RootNode
+    100026: Stone062
+    100028: Stone063
+    100030: Stone064
+    100032: Stone065
+    100034: Stone066
+    100036: Stone067
+    100038: Stone068
+    100040: Stone069
+    100042: Stone070
+    100044: Stone071
+    400000: Jnt_Ref
+    400002: Jnt_Root
+    400004: Jnt_Stone01
+    400006: Jnt_Stone010
+    400008: Jnt_Stone02
+    400010: Jnt_Stone03
+    400012: Jnt_Stone04
+    400014: Jnt_Stone05
+    400016: Jnt_Stone06
+    400018: Jnt_Stone07
+    400020: Jnt_Stone08
+    400022: Jnt_Stone09
+    400024: //RootNode
+    400026: Stone062
+    400028: Stone063
+    400030: Stone064
+    400032: Stone065
+    400034: Stone066
+    400036: Stone067
+    400038: Stone068
+    400040: Stone069
+    400042: Stone070
+    400044: Stone071
+    4300000: Stone062
+    4300002: Stone063
+    4300004: Stone064
+    4300006: Stone065
+    4300008: Stone066
+    4300010: Stone067
+    4300012: Stone068
+    4300014: Stone069
+    4300016: Stone070
+    4300018: Stone071
+    7400000: RockWall_Up
+    9500000: //RootNode
+    13700000: Stone062
+    13700002: Stone063
+    13700004: Stone064
+    13700006: Stone065
+    13700008: Stone066
+    13700010: Stone067
+    13700012: Stone068
+    13700014: Stone069
+    13700016: Stone070
+    13700018: Stone071
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: RockWall_Up
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jnt_Ref
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone01
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone02
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone03
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone04
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone05
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone06
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone07
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone08
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone09
+        weight: 1
+      - path: Jnt_Ref/Jnt_Root/Jnt_Stone010
+        weight: 1
+      - path: Stone062
+        weight: 1
+      - path: Stone063
+        weight: 1
+      - path: Stone064
+        weight: 1
+      - path: Stone065
+        weight: 1
+      - path: Stone066
+        weight: 1
+      - path: Stone067
+        weight: 1
+      - path: Stone068
+        weight: 1
+      - path: Stone069
+        weight: 1
+      - path: Stone070
+        weight: 1
+      - path: Stone071
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
