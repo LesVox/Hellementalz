@@ -466,7 +466,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Controller1: {fileID: 11463466}
   Controller2: {fileID: 11499708}
-  FireballDemand: 1
+  FireballDemand: 0.5
+  WallOriginOffset: 1
+  WallDemand: 0.1
 --- !u!114 &11449866
 MonoBehaviour:
   m_ObjectHideFlags: 1
