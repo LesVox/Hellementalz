@@ -10,6 +10,9 @@ public class TrackerStateController : MonoBehaviour {
     ControllerTracker ActiveHand = null;
     ControllerTracker OffHand = null;
 
+    private float SpellCooldown = 0;
+    private float SpellCooldownMax = .5f;
+
     #region Spells
 
     public float FireballDemand = .1f;
@@ -32,13 +35,15 @@ public class TrackerStateController : MonoBehaviour {
 
     void Update ()
     {
-        Debug.Log("Is tracking: " + (Controller1.IsTracking || Controller2.IsTracking));
 	    if(Controller1.IsTracking || Controller2.IsTracking)
         {
             DetermineSpell();
            // Debug.Log("Tracking is working");
         }
-	}
+
+        if (SpellCooldown > -0.0001f)
+            SpellCooldown += Time.deltaTime;
+    }
 
     void DetermineHand()
     {
@@ -57,33 +62,36 @@ public class TrackerStateController : MonoBehaviour {
 
     void DetermineSpell()
     {
-        DetermineHand();
-        //Debug.Log("Active hand = " + ActiveHand);
-        //Debug.Log("FireballSqr = " + FireballSqr(ActiveHand));
-        Debug.Log(1);
-        if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
+        if (SpellCooldown >= SpellCooldownMax || SpellCooldown < -0.0001f)
         {
-            Debug.Log(2);
-            if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
-            {
-                Debug.Log(3);
-                SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
-            }
-            else
-            {
-                Debug.Log(4);
-                SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
-            }
-        }
+            //Off cooldown, cast spell
+            
+            DetermineHand();
 
-        if(WallSqr(ActiveHand) >= WallDemand)
-        {
-            //TODO: Wall func
+            if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
+            {
+                Debug.Log(2);
+                if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
+                {
+                    Debug.Log(3);
+                    SpellFactory.CastStrongFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                }
+                else
+                {
+                    Debug.Log(4);
+                    SpellFactory.CastLightFireball(ActiveHand.transform.position, ActiveHand.TotalMoveV.normalized);
+                }
+            }
+            SpellCooldown = 0;
+
+            if (WallSqr(ActiveHand) >= WallDemand && WallSqr(OffHand) >= WallDemand / 2)
+            {
+                //SpellFactory.CastWall()
+            }
+
+            SpellCooldown = 0;
+
         }
 
     }
-
-    
-    
-
 }
