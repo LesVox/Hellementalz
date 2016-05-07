@@ -67,7 +67,8 @@ GameObject:
   - 114: {fileID: 11469006}
   - 114: {fileID: 11448916}
   - 136: {fileID: 13648854}
-  - 114: {fileID: 11444186}
+  - 114: {fileID: 11447022}
+  - 114: {fileID: 11456648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -136,8 +137,11 @@ GameObject:
   - 4: {fileID: 437568}
   - 20: {fileID: 2034982}
   - 124: {fileID: 12435908}
-  - 114: {fileID: 11442646}
-  - 114: {fileID: 11408878}
+  - 114: {fileID: 11412966}
+  - 114: {fileID: 11428056}
+  - 114: {fileID: 11410356}
+  - 114: {fileID: 11472534}
+  - 114: {fileID: 11415914}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -429,7 +433,32 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124052}
   m_Enabled: 1
---- !u!114 &11408878
+--- !u!114 &11410356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50e925fb93c78246bf995d9dc3a2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  adaptiveTextureSize: 256
+  remapCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  exposureAdjustment: 1.5
+  middleGrey: 0.1
+  white: 3
+  adaptionSpeed: 2
+  tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
+  validRenderTextureFormat: 0
+--- !u!114 &11412966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -443,7 +472,18 @@ MonoBehaviour:
   _head: {fileID: 489758}
   _ears: {fileID: 478440}
   wireframe: 0
-  flip: {fileID: 11442646}
+  flip: {fileID: 11415914}
+--- !u!114 &11415914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5be45115742b07478e21c85fcc233ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11425940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrcam: {fileID: 0}
---- !u!114 &11442646
+--- !u!114 &11428056
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -464,10 +504,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 192780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5be45115742b07478e21c85fcc233ec, type: 3}
+  m_Script: {fileID: 11500000, guid: bd70d448b18cfbc46af26466f752332c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11444186
+  visualizeFocus: 0
+  focalLength: 2.72
+  focalSize: 1
+  aperture: 12.63
+  focalTransform: {fileID: 0}
+  maxBlurSize: 2
+  highResolution: 0
+  blurType: 0
+  blurSampleCount: 2
+  nearBlur: 0
+  foregroundOverlap: 1
+  dofHdrShader: {fileID: 4800000, guid: acd613035ff3e455e8abf23fdc8c8c24, type: 3}
+  dx11BokehShader: {fileID: 4800000, guid: d8e82664aa8686642a424c88ab10164a, type: 3}
+  dx11BokehThreshold: 0.5
+  dx11SpawnHeuristic: 0.0875
+  dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
+  dx11BokehScale: 1.2
+  dx11BokehIntensity: 2.5
+--- !u!114 &11447022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -478,8 +536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b4d03b722972040b4ba8a6c28a1bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHp: 100
+  m_maxHp: 30
   m_restartDelay: 5
+  m_loseObject: {fileID: 0}
 --- !u!114 &11448916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -494,8 +553,8 @@ MonoBehaviour:
   LeftController: {fileID: 11463466}
   RightController: {fileID: 11499708}
   FireballDemand: 0.5
-  WallOriginOffset: 1
-  WallDemand: 0.1
+  WallOriginOffset: 2
+  WallDemand: 0.2
 --- !u!114 &11449866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,6 +568,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scale: 1.5
   drawOverlay: 1
+--- !u!114 &11456648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ee7e48a7c893c40b869c82380792e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeIsSlowed: 0
 --- !u!114 &11463466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,6 +635,44 @@ MonoBehaviour:
   index: -1
   origin: {fileID: 0}
   isValid: 0
+--- !u!114 &11472534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweakMode: 0
+  screenBlendMode: 1
+  hdr: 0
+  sepBlurSpread: 2.5
+  quality: 1
+  bloomIntensity: 0.86
+  bloomThreshold: 0.9
+  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
+  bloomBlurIterations: 2
+  hollywoodFlareBlurIterations: 2
+  flareRotation: 0
+  lensflareMode: 1
+  hollyStretchWidth: 2.5
+  lensflareIntensity: 0
+  lensflareThreshold: 0.3
+  lensFlareSaturation: 0.75
+  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
+  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
+  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
+  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
+  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
+    type: 3}
+  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
+  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
+  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
+  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
+    type: 3}
 --- !u!114 &11475902
 MonoBehaviour:
   m_ObjectHideFlags: 1

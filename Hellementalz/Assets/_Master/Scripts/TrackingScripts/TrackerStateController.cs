@@ -23,7 +23,7 @@ public class TrackerStateController : MonoBehaviour {
         return new Vector3(Controller.TotalMoveV.x, 0, Controller.TotalMoveV.z).sqrMagnitude;
     }
 
-    public float WallOriginOffset = 1;
+    public float WallOriginOffset = 5;
     public float WallDemand = .1f;
     public float WallVY(ControllerTracker Controller)
     {
@@ -87,7 +87,7 @@ public class TrackerStateController : MonoBehaviour {
 
             if (WallVY(ActiveHand) >= WallDemand && WallVY(OffHand) >= WallDemand / 2)
             {
-                Vector3 Offset = Vector3.Cross(LeftController.transform.position - RightController.transform.position, Vector3.down).normalized;
+                Vector3 Offset = Vector3.Cross(RightController.transform.position - LeftController.transform.position, Vector3.down).normalized;
                 Vector3 OriginPosition = ActiveHand.transform.position - OffHand.transform.position;
                 OriginPosition.x /= 2;
                 OriginPosition.y /= 2;
