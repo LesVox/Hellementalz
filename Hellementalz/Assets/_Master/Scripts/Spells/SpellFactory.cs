@@ -6,7 +6,8 @@ public class SpellFactory : MonoBehaviour
     public enum SpellTypes
     {
         LightFireball,
-        StrongFireball
+        StrongFireball,
+        EarthPillar
     }
 
     [System.Serializable]
