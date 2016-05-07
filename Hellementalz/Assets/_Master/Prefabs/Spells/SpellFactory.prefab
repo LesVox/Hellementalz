@@ -44,6 +44,8 @@ MonoBehaviour:
     spellPrefab: {fileID: 143604, guid: decfa2403dbe22442b22725d2962bc77, type: 2}
   - spellType: 1
     spellPrefab: {fileID: 179296, guid: 6f8f003520561a741a39e101ecc4c8e1, type: 2}
+  - spellType: 2
+    spellPrefab: {fileID: 156624, guid: ecba69917cb515b4faefdd21047ab8a1, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
