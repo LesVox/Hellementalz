@@ -106,7 +106,7 @@ public class TrackerStateController : MonoBehaviour {
     {
         SpellCooldown = 0;
 
-        Controller1.IsTracking = false;
-        Controller2.IsTracking = false;
+        LeftController.IsTracking = false;
+        RightController.IsTracking = false;
     }
 }

@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3991f86d1ab9c4385a44a2748432ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller1: {fileID: 11463466}
-  Controller2: {fileID: 11499708}
+  LeftController: {fileID: 11463466}
+  RightController: {fileID: 11499708}
   FireballDemand: 0.5
   WallOriginOffset: 1
   WallDemand: 0.1
