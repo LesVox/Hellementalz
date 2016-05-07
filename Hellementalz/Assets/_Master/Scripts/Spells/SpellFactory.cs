@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class SpellFactory : MonoBehaviour
 {
+    void Start()
+    {
+        SpellFactory.CastWall(Vector3.forward);
+    }
     public enum SpellTypes
     {
         LightFireball,
