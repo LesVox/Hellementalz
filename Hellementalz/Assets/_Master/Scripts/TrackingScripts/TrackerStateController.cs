@@ -92,7 +92,7 @@ public class TrackerStateController : MonoBehaviour {
                 OriginPosition.x /= 2;
                 OriginPosition.y /= 2;
                 
-                SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset));
+                SpellFactory.CastWall(OriginPosition + (Offset * WallOriginOffset), OriginPosition);
 
                 OnSpellCast();
             }
