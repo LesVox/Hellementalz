@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Gong
-  m_Shader: {fileID: 4800000, guid: ff1b2052acebf08499b11c9de9063e0e, type: 3}
-  m_ShaderKeywords: _PANNER_ON
+  m_Name: M_Gong02
+  m_Shader: {fileID: 4800000, guid: 2832f3673efe1dd4fa342a75a5fe1df8, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
   stringTagMap: {}
@@ -82,21 +82,7 @@ Material:
         first:
           name: _Specular
         second:
-          m_Texture: {fileID: 2800000, guid: 8abd688845e498542ab711b500efd38c, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: f1b61b42675005c4daa46defdf1f9d09, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Light
-        second:
-          m_Texture: {fileID: 2800000, guid: 2f609aa2c23fd3c428026148820dd166, type: 3}
+          m_Texture: {fileID: 2800000, guid: 68386fc9897223346a683105b4dc1662, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -151,32 +137,20 @@ Material:
       data:
         first:
           name: _Gloss
-        second: 0
+        second: 1
       data:
         first:
           name: _OutlineWidth
-        second: 0.24
+        second: 0.18
       data:
         first:
-          name: _Opacity
-        second: 1
-      data:
-        first:
-          name: _FresnelStrength
-        second: 0
-      data:
-        first:
-          name: _Panner
-        second: 1
-      data:
-        first:
-          name: _Strength
-        second: 1
+          name: _Emission
+        second: 0.07
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0.6784314, g: 0.60784316, b: 0.18039216, a: 1}
       data:
         first:
           name: _Color
@@ -184,4 +158,4 @@ Material:
       data:
         first:
           name: _OutlineColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0.9264706, b: 0, a: 1}
