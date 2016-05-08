@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 433658}
   - 33: {fileID: 3377930}
   - 23: {fileID: 2304724}
-  - 64: {fileID: 6447322}
   - 114: {fileID: 11410126}
   - 114: {fileID: 11440096}
   - 114: {fileID: 11464128}
   - 114: {fileID: 11487068}
+  - 136: {fileID: 13660112}
   m_Layer: 0
   m_Name: Target_Mesh
   m_TagString: Untagged
@@ -95,18 +95,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117784}
   m_Mesh: {fileID: 4300000, guid: dc5f299a720b95f40a811411888f144d, type: 3}
---- !u!64 &6447322
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: dc5f299a720b95f40a811411888f144d, type: 3}
 --- !u!114 &11410126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,6 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_minCooldown: 1
   m_maxCooldown: 5
+--- !u!136 &13660112
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.25
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: -0.00000029802322, y: 2.5967166, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
