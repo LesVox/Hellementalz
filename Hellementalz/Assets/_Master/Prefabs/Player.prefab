@@ -66,6 +66,9 @@ GameObject:
   - 33: {fileID: 3321364}
   - 114: {fileID: 11469006}
   - 114: {fileID: 11448916}
+  - 136: {fileID: 13648854}
+  - 114: {fileID: 11447022}
+  - 114: {fileID: 11456648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,8 +168,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165036}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 2.26, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410558}
@@ -454,7 +457,7 @@ MonoBehaviour:
   white: 3
   adaptionSpeed: 2
   tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
-  validRenderTextureFormat: 1
+  validRenderTextureFormat: 0
 --- !u!114 &11412966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -522,6 +525,20 @@ MonoBehaviour:
   dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
   dx11BokehScale: 1.2
   dx11BokehIntensity: 2.5
+--- !u!114 &11447022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b4d03b722972040b4ba8a6c28a1bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHp: 30
+  m_restartDelay: 5
+  m_loseObject: {fileID: 0}
 --- !u!114 &11448916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -551,6 +568,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scale: 1.5
   drawOverlay: 1
+--- !u!114 &11456648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ee7e48a7c893c40b869c82380792e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeIsSlowed: 0
 --- !u!114 &11463466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,6 +737,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192780}
   m_Enabled: 1
+--- !u!136 &13648854
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
