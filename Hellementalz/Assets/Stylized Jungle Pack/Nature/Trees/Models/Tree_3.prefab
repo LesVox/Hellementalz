@@ -11,6 +11,9 @@ GameObject:
   - 193: {fileID: 19388122}
   - 33: {fileID: 3373892}
   - 23: {fileID: 2309914}
+  - 136: {fileID: 13610498}
+  - 114: {fileID: 11437356}
+  - 114: {fileID: 11454680}
   m_Layer: 0
   m_Name: Tree_3
   m_TagString: Untagged
@@ -25,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.53, y: 0, z: 2.77}
+  m_LocalPosition: {x: 43.27513, y: 0, z: -36.182907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,16 +122,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _BumpSpecMap
+          name: _ShadowTex
         second:
-          m_Texture: {fileID: 2800000, guid: 69f2348d5c4472f4fa531565943b3b43, type: 3}
+          m_Texture: {fileID: 2800000, guid: 8aeece6aa091e0847928ff56fa0ae48b, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ShadowTex
+          name: _BumpSpecMap
         second:
-          m_Texture: {fileID: 2800000, guid: 8aeece6aa091e0847928ff56fa0ae48b, type: 3}
+          m_Texture: {fileID: 2800000, guid: 69f2348d5c4472f4fa531565943b3b43, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -340,6 +343,31 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &11437356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3f8501bd5a5b642bf880fa33411165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHp: 1
+--- !u!114 &11454680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa816cbc6ffe44898ef5250307b6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedObjectPrefab: {fileID: 151252, guid: 4babdee2d77e6424089eaa78a936798c,
+    type: 2}
 --- !u!114 &11465608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34725,6 +34753,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 2167218}
   optimizedCutoutMaterial: {fileID: 2181844}
   isInPreviewMode: 0
+--- !u!136 &13610498
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.11
+  m_Height: 18.482225
+  m_Direction: 1
+  m_Center: {x: -0.35, y: 9.241113, z: -0.7880454}
 --- !u!193 &19388122
 Tree:
   m_ObjectHideFlags: 1

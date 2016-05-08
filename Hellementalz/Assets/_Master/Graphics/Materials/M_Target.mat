@@ -148,7 +148,7 @@ Material:
       data:
         first:
           name: _OutlineWidth
-        second: 0.04
+        second: 0.1
     m_Colors:
       data:
         first:
@@ -162,3 +162,7 @@ Material:
         first:
           name: _SpecColor
         second: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 1, g: 0, b: 0, a: 1}

@@ -52,7 +52,8 @@ ModelImporter:
     400042: HandJnt_R_Thumb03End
     400044: HandJnt_R_ThumbBase
     4300000: Hand_L
-    7400000: Take 001
+    7400000: HandClench
+    7400002: HandRelaxed
     9500000: //RootNode
     13700000: Hand_L
   materials:
@@ -75,7 +76,155 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: HandClench
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hand_L
+        weight: 1
+      - path: HandJnt_R_Root
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02/HandJnt_R_Index03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02/HandJnt_R_Index03/HandJnt_R_Index04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02/HandJnt_R_Long03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02/HandJnt_R_Long03/HandJnt_R_Long04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02/HandJnt_R_Pinky03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02/HandJnt_R_Pinky03/HandJnt_R_Pinky04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02/HandJnt_R_Ring03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02/HandJnt_R_Ring03/HandJnt_R_Ring04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01/HandJnt_R_Thumb02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01/HandJnt_R_Thumb02/HandJnt_R_Thumb03End
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HandRelaxed
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hand_L
+        weight: 1
+      - path: HandJnt_R_Root
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02/HandJnt_R_Index03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Index01/HandJnt_R_Index02/HandJnt_R_Index03/HandJnt_R_Index04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02/HandJnt_R_Long03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Long01/HandJnt_R_Long02/HandJnt_R_Long03/HandJnt_R_Long04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02/HandJnt_R_Pinky03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Pinky01/HandJnt_R_Pinky02/HandJnt_R_Pinky03/HandJnt_R_Pinky04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02/HandJnt_R_Ring03
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_Ring01/HandJnt_R_Ring02/HandJnt_R_Ring03/HandJnt_R_Ring04End
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01/HandJnt_R_Thumb02
+        weight: 1
+      - path: HandJnt_R_Root/HandJnt_R_ThumbBase/HandJnt_R_Thumb01/HandJnt_R_Thumb02/HandJnt_R_Thumb03End
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

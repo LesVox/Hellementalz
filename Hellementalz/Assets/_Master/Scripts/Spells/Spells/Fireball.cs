@@ -51,11 +51,14 @@ public class Fireball : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        HP hp = col.GetComponent<HP>();
-        if (hp != null)
+        if (Vector3.SqrMagnitude(m_startPosition - m_rigidbody.position) > 0.1f)
         {
-            Destroy(gameObject);
-            hp.DealDamage(m_damage);
+            HP hp = col.GetComponent<HP>();
+            if (hp != null)
+            {
+                Destroy(gameObject);
+                hp.DealDamage(m_damage);
+            }
         }
     }
 
