@@ -3,10 +3,7 @@ using System.Collections;
 using System;
 
 public class ControllerTracker : MonoBehaviour {
-
-    [SerializeField]
-    TrackerStateController MyController;
-
+    
     private bool m_IsTracking = false;
     public bool IsTracking
     {

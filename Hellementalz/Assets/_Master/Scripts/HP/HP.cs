@@ -16,10 +16,11 @@ public class HP : MonoBehaviour
 
         if (m_currentHp <= 0)
         {
+            m_currentHp = 0;
             Die();
         }
 
-        Debug.Log("HP: " + m_currentHp);
+        Debug.Log("HP " + name + ": " + m_currentHp);
     }
 
     protected virtual void Die()
