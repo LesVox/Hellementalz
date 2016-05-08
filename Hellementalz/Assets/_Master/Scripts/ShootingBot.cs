@@ -27,8 +27,10 @@ public class ShootingBot : MonoBehaviour
         if (m_timeSinceLastAttack >= m_currentCooldown)
         {
             SetNewCooldown();
-            Vector3 direction = (Camera.main.transform.position - transform.position).normalized;
-            SpellFactory.CastLightFireball(transform.position + direction * 3, direction);
+            Vector3 Height = Vector3.up * 1.4f;
+            Vector3 direction = (Camera.main.transform.position - (transform.position + Height)).normalized;
+            
+            SpellFactory.CastLightFireball(Height + (transform.position + direction * 3), direction);
         }
 	}
 
