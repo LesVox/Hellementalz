@@ -96,10 +96,7 @@ public class TrackerStateController : MonoBehaviour {
 
                 OnSpellCast();
             }
-            
-
         }
-
     }
 
     private void OnSpellCast()
