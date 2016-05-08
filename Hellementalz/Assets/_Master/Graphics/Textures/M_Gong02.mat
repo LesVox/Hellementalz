@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Gong02
-  m_Shader: {fileID: 4800000, guid: 0b877d8bdcbc24847a4b2666f404fb01, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2832f3673efe1dd4fa342a75a5fe1df8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -136,6 +136,10 @@ Material:
         second: 0
       data:
         first:
+          name: _Emission
+        second: 1
+      data:
+        first:
           name: _Gloss
         second: 1
       data:
@@ -146,7 +150,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0.6784314, g: 0.60784316, b: 0.18039216, a: 1}
       data:
         first:
           name: _Color
