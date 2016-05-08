@@ -206,8 +206,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.53, y: -0.53, z: -62.46}
+  m_LocalRotation: {x: 0, y: -0.02191884, z: 0, w: 0.9997598}
+  m_LocalPosition: {x: 0.14306493, y: -1.1300001, z: -19.69269}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 451836}
@@ -619,7 +619,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 5.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.5300003, y: 9.851125, z: -62.46}
+  m_ConnectedAnchor: {x: 0.14306524, y: 9.251124, z: -19.69269}
   m_UseSpring: 1
   m_Spring:
     spring: 0
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Main
-  delay: 1
+  delay: 3
 --- !u!114 &11469172
 MonoBehaviour:
   m_ObjectHideFlags: 1

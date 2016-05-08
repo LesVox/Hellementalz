@@ -228,7 +228,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!43 &459979575
+--- !u!43 &484005200
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -398,7 +398,7 @@ Prefab:
     - target: {fileID: 3321364, guid: d5c1cc06ec391d6478e3b77b8f3973b8, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 459979575}
+      objectReference: {fileID: 484005200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c1cc06ec391d6478e3b77b8f3973b8, type: 2}
   m_IsPrefabParent: 0
