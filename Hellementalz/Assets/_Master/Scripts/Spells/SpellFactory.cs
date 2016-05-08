@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class SpellFactory : MonoBehaviour
 {
+    void Start()
+    {
+        SpellFactory.CastWall(Vector3.forward * 10, Vector3.zero);
+        SpellFactory.CastWall(Vector3.left * 10, Vector3.zero);
+        SpellFactory.CastWall(Vector3.right * 10, Vector3.zero);
+        SpellFactory.CastWall(Vector3.back * 10, Vector3.zero);
+    }
     public enum SpellTypes
     {
         LightFireball,
@@ -50,12 +57,12 @@ public class SpellFactory : MonoBehaviour
     /// Spawns a wall at the given position
     /// </summary>
     /// <param name="origin">The position of the wall</param>
-    public static void CastWall(Vector3 origin)
+    public static void CastWall(Vector3 origin, Vector3 lookAt)
     {
         GameObject newObject = Instantiate<GameObject>(Instance.GetPrefabFromSpellType(SpellTypes.Wall));
 
         Wall wall = newObject.GetComponent<Wall>();
-        wall.SpawnWall(origin);
+        wall.SpawnWall(origin, lookAt);
     }
 
     /// <summary>
