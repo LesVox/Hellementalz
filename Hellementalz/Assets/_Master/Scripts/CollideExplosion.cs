@@ -9,6 +9,12 @@ public class CollideExplosion : MonoBehaviour {
 	public float explosionPower = 10f;
 
 	private GameObject explosionObject;
+    private Vector3 startPosition;
+
+    void Awake()
+    {
+        startPosition = transform.position;
+    }
 
 	void Start(){
 		
@@ -29,31 +35,35 @@ public class CollideExplosion : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 
+        Debug.Log("CollideExplosion");
 
-
-		if (((1<<col.gameObject.layer) & hitLayer) != 0) {
-
-            explosionObject = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            if (col.GetComponent<Fireball>() != null)
+        if (Vector3.SqrMagnitude(startPosition - transform.position) > 0.1f)
+        {
+            if (((1 << col.gameObject.layer) & hitLayer) != 0)
             {
-                FindObjectOfType<FreezetimeScript>().SlowTime();
-            }
 
-            HP hp = col.GetComponent<HP>();
-			if (hp != null)
-			{
-				//hp.DealDamage(1);
-			}
-            Destroy(this.gameObject);
-            /*
-			if (explosionObject != null) {
-				explosionObject.SetActive (false);
-				explosionObject.transform.position = transform.position;
-				explosionObject.SetActive (true);
-				gameObject.SetActive (false);
-			}
-            */
-		}
+                explosionObject = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                if (col.GetComponent<Fireball>() != null)
+                {
+                    FindObjectOfType<FreezetimeScript>().SlowTime();
+                }
+
+                HP hp = col.GetComponent<HP>();
+                if (hp != null)
+                {
+                    //hp.DealDamage(1);
+                }
+                Destroy(this.gameObject);
+                /*
+                if (explosionObject != null) {
+                    explosionObject.SetActive (false);
+                    explosionObject.transform.position = transform.position;
+                    explosionObject.SetActive (true);
+                    gameObject.SetActive (false);
+                }
+                */
+            }
+        }
 	}
 
 }
