@@ -8,16 +8,19 @@ public class Countdown : MonoBehaviour {
     Text MyText;
 
     [SerializeField]
-    float Timer = 6;
-    
-	void Start ()
+    float Timer = 10;
+    string UIText;
+
+
+    void Start ()
     {
-	}
+        
+    }
 	
 	void Update ()
     {
         Timer -= Time.unscaledDeltaTime;
         int TimeLeft = Mathf.FloorToInt(Timer);
-        MyText.GetComponent<Text>().text = TimeLeft.ToString();
+        MyText.text = TimeLeft.ToString();
 	}
 }
