@@ -10,6 +10,8 @@ public class EnemyHP : HP
     [SerializeField]
     private GameObject m_winObject;
 
+    private float m_timer;
+
     protected override void Die()
     {
         Debug.Log("Enemy died");
@@ -32,13 +34,35 @@ public class EnemyHP : HP
         if (m_winObject != null)
             m_winObject.SetActive(true);
 
+        GameData.GameOver = true;
+
         //Start respawn timer
-        StartCoroutine(DelayedRespawn());
+        StartCoroutine(SlowMotion());
     }
 
-    private IEnumerator DelayedRespawn()
+    void Update()
     {
-        yield return new WaitForSeconds(m_restartDelay);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (m_currentHp <= 0)
+        {
+            //Dead
+            m_timer += Time.unscaledDeltaTime; //Time is stopped when dead
+
+            if (m_timer >= m_restartDelay)
+            {
+                StopCoroutine(SlowMotion());
+                Time.timeScale = 1;
+                GameData.GameOver = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
+
+    private IEnumerator SlowMotion()
+    {
+        while (Time.timeScale > 0.2 && GameData.GameOver)
+        {
+            Time.timeScale = Mathf.Lerp(Time.timeScale, 0.2f, Time.deltaTime * 10);
+            yield return null;
+        }
     }
 }
