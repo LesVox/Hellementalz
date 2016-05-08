@@ -19,7 +19,8 @@ public class PlayerHP : HP
 
         Time.timeScale = 0;
         m_timer = 0;
-        StartCoroutine(DelayedRestart());
+        
+        GameData.GameOver = true;
     }
 
     void Update()
@@ -32,16 +33,9 @@ public class PlayerHP : HP
             if (m_timer >= m_restartDelay)
             {
                 Time.timeScale = 1;
+                GameData.GameOver = false;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-    }
-
-    IEnumerator DelayedRestart()
-    {
-        Debug.Log("Start timer");
-        yield return new WaitForSeconds(m_restartDelay);
-        Debug.Log("Restart");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

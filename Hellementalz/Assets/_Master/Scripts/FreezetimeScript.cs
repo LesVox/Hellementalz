@@ -8,7 +8,6 @@ public class FreezetimeScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(2);
         if(TimeIsSlowed && !RunningCoroutine)
         {
             StartCoroutine(RestoreTime());
