@@ -34,7 +34,10 @@ public class CollideExplosion : MonoBehaviour {
 		if (((1<<col.gameObject.layer) & hitLayer) != 0) {
 
             explosionObject = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            FindObjectOfType<FreezetimeScript>().SlowTime();
+            if (col.GetComponent<Fireball>() != null)
+            {
+                FindObjectOfType<FreezetimeScript>().SlowTime();
+            }
 
             HP hp = col.GetComponent<HP>();
 			if (hp != null)
