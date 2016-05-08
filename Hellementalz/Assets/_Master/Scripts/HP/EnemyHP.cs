@@ -12,6 +12,7 @@ public class EnemyHP : HP
 
     protected override void Die()
     {
+        Debug.Log("Enemy died");
         //Disable shooting bot
         ShootingBot shootingBot = GetComponent<ShootingBot>();
         if (shootingBot != null)

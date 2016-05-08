@@ -43,7 +43,7 @@ public class TrackerStateController : MonoBehaviour {
         }
 
         if (SpellCooldown > -0.0001f)
-            SpellCooldown += Time.deltaTime;
+            SpellCooldown += Time.unscaledDeltaTime;
     }
 
     void DetermineHand()
@@ -73,7 +73,7 @@ public class TrackerStateController : MonoBehaviour {
                 Vector3 direction = ActiveHand.TotalMoveV.normalized;
                 direction.y = 0;
 
-                if (FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
+                if (OffHand.IsTracking && FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
                 {
                     SpellFactory.CastStrongFireball(ActiveHand.transform.position, direction);
                     OnSpellCast();
