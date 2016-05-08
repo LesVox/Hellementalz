@@ -11,6 +11,9 @@ GameObject:
   - 193: {fileID: 19388122}
   - 33: {fileID: 3373892}
   - 23: {fileID: 2309914}
+  - 136: {fileID: 13665406}
+  - 114: {fileID: 11498210}
+  - 114: {fileID: 11476164}
   m_Layer: 0
   m_Name: Tree_2
   m_TagString: Untagged
@@ -25,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.53, y: 0, z: 2.77}
+  m_LocalPosition: {x: 51.875107, y: 0, z: -36.408386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,16 +122,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _BumpSpecMap
+          name: _ShadowTex
         second:
-          m_Texture: {fileID: 2800000, guid: c68d8c20273bc2c4ebfc9f40800889a1, type: 3}
+          m_Texture: {fileID: 2800000, guid: 9537a8e2fde632f40886d11e403f44af, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ShadowTex
+          name: _BumpSpecMap
         second:
-          m_Texture: {fileID: 2800000, guid: 9537a8e2fde632f40886d11e403f44af, type: 3}
+          m_Texture: {fileID: 2800000, guid: c68d8c20273bc2c4ebfc9f40800889a1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -37416,6 +37419,44 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 2167218}
   optimizedCutoutMaterial: {fileID: 2181844}
   isInPreviewMode: 0
+--- !u!114 &11476164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa816cbc6ffe44898ef5250307b6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedObjectPrefab: {fileID: 194998, guid: 36d2187bc6fea0d46a5407e93aaeb89d,
+    type: 2}
+--- !u!114 &11498210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3f8501bd5a5b642bf880fa33411165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHp: 1
+--- !u!136 &13665406
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8
+  m_Height: 16.329521
+  m_Direction: 1
+  m_Center: {x: 0.12181544, y: 8.164761, z: 0.04}
 --- !u!193 &19388122
 Tree:
   m_ObjectHideFlags: 1
