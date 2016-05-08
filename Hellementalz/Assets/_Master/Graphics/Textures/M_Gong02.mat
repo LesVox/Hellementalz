@@ -136,16 +136,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Emission
-        second: 1
-      data:
-        first:
           name: _Gloss
         second: 1
       data:
         first:
           name: _OutlineWidth
         second: 0.18
+      data:
+        first:
+          name: _Emission
+        second: 0.07
     m_Colors:
       data:
         first:
@@ -158,4 +158,4 @@ Material:
       data:
         first:
           name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 0.9264706, b: 0, a: 1}
