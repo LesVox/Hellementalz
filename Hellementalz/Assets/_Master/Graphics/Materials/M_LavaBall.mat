@@ -178,7 +178,7 @@ Material:
       data:
         first:
           name: _Intensity
-        second: 0.0004
+        second: 0.004
     m_Colors:
       data:
         first:
