@@ -354,7 +354,7 @@ public class SteamVR_LoadLevel : MonoBehaviour
 #if UNITY_EDITOR
 				UnityEditor.EditorApplication.isPlaying = false;
 #else
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
+				System.Diagnostics.Process.GetCurrentProcess().Kill();
 #endif
 			}
 		}
