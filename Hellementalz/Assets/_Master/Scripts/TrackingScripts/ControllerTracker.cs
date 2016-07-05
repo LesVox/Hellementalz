@@ -18,6 +18,7 @@ public class ControllerTracker : MonoBehaviour {
     public float TotalMoveSqr = 0;
 
     private int MyIndex;
+    public int MyIndexPublic { get { return MyIndex; } }
 
     void Update ()
     {
