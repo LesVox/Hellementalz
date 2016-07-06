@@ -32,6 +32,7 @@ public class ControllerTracker : MonoBehaviour {
         {
             TrackerCount += Time.deltaTime;
             TrackMovement();
+            SteamVR_Controller.Input(MyIndex).TriggerHapticPulse();
         }
         if(SteamVR_Controller.Input(MyIndex).GetPressUp(SteamVR_Controller.ButtonMask.Trigger) || TrackerCount >= TrackerCountMax)
         {
