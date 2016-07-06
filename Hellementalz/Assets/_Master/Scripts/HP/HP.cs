@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
     [SerializeField]
     int m_maxHp = 1;
+
+    [SerializeField]
+    private Slider m_hpBar;
 
     protected int m_currentHp;
 
@@ -14,13 +17,14 @@ public class HP : MonoBehaviour
 
         m_currentHp -= damage;
 
+        if (m_hpBar != null)
+            m_hpBar.value = (float)m_currentHp / m_maxHp;
+
         if (m_currentHp <= 0)
         {
             m_currentHp = 0;
             Die();
         }
-
-        Debug.Log("HP " + name + ": " + m_currentHp);
     }
 
     protected virtual void Die()
@@ -34,7 +38,8 @@ public class HP : MonoBehaviour
         AssertParams();
     }
 
-	public int GetHealth(){
+	public int GetHealth()
+    {
 		return m_currentHp;
 	}
 
