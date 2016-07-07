@@ -18,8 +18,8 @@ public class FreezetimeScript : MonoBehaviour
     {
         if (Time.timeScale > 0.0001f)
         {
-            Time.timeScale = .2f;
-            TimeIsSlowed = true;
+            //Time.timeScale = .2f;
+            //TimeIsSlowed = true;
         }
     }
 

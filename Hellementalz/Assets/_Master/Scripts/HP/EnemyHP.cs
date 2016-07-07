@@ -61,7 +61,7 @@ public class EnemyHP : HP
     {
         while (Time.timeScale > 0.2 && GameData.GameOver)
         {
-            Time.timeScale = Mathf.Lerp(Time.timeScale, 0.2f, Time.deltaTime * 10);
+            //Time.timeScale = Mathf.Lerp(Time.timeScale, 0.2f, Time.deltaTime * 10);
             yield return null;
         }
     }

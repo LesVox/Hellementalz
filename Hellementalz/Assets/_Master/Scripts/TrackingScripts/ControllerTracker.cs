@@ -18,11 +18,13 @@ public class ControllerTracker : MonoBehaviour {
     public float TotalMoveSqr = 0;
 
     private int MyIndex;
+    public int MyIndexPublic { get { return MyIndex; } }
 
     void Update ()
     {
-        
-        if (SteamVR_Controller.Input(MyIndex).GetPressDown(SteamVR_Controller.ButtonMask.Trigger) && IsTracking == false)
+        SteamVR_Controller.Device controller = SteamVR_Controller.Input(MyIndex);
+
+        if (controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger) && IsTracking == false)
         {
             IsTracking = true;
             OriginalPos = gameObject.transform.position;
@@ -31,8 +33,9 @@ public class ControllerTracker : MonoBehaviour {
         {
             TrackerCount += Time.deltaTime;
             TrackMovement();
+            controller.TriggerHapticPulse();
         }
-        if(SteamVR_Controller.Input(MyIndex).GetPressUp(SteamVR_Controller.ButtonMask.Trigger) || TrackerCount >= TrackerCountMax)
+        if(controller.GetPressUp(SteamVR_Controller.ButtonMask.Trigger) || TrackerCount >= TrackerCountMax)
         {
             IsTracking = false;
             TotalMoveV = Vector3.zero;
