@@ -33,7 +33,7 @@ public class PlayerHP : HP
             {
                 Time.timeScale = 1;
                 GameData.GameOver = false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(0);
             }
         }
     }
