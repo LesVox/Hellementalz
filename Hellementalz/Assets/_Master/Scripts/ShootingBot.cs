@@ -5,6 +5,8 @@ public class ShootingBot : MonoBehaviour
 {
     [SerializeField]
     private float m_minCooldown = 0.5f, m_maxCooldown = 1;
+    [SerializeField]
+    private Transform m_target;
 
     private float m_timeSinceLastAttack = -1;
     private float m_currentCooldown;
@@ -28,7 +30,7 @@ public class ShootingBot : MonoBehaviour
         {
             SetNewCooldown();
             Vector3 Height = Vector3.up * 1.4f;
-            Vector3 direction = (Camera.main.transform.position - (transform.position + Height)).normalized;
+            Vector3 direction = (m_target.position - (transform.position + Height)).normalized;
             
             SpellFactory.CastLightFireball(Height + (transform.position + direction * 3), direction);
         }

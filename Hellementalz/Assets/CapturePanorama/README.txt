@@ -34,7 +34,8 @@ We will capture an image file for each frame of the video.
 3. Set "Save Image Path" to a fast disk with sufficient capacity for the raw video frames.
 4. Set "Panorama Width" to the desired width of your video. Test your playback environment to ensure it supports the video size. Typically mono uses 4096 or 3840 and stereo uses 2048, 2160, 2880, or 3048.
 5. Enable "Use Gpu Transform". Disable "Save Cubemap" unless you want cube map images for each frame.
-6. For highest quality with slower encoding, increase "Ssaa Factor" to 2, 3, or 4.
+6. For highest quality with 
+er encoding, increase "Ssaa Factor" to 2, 3, or 4.
 7. Start the application and use the capture hotkey ("P" by default) to toggle between capturing and not capturing. You can also programmatically call StartCaptureEveryFrame() and StopCaptureEveryFrame().
 8. Run the same scene again at normal speed and use any recording software to separately record the audio.
 
