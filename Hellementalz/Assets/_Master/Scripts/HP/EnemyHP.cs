@@ -52,7 +52,7 @@ public class EnemyHP : HP
                 StopCoroutine(SlowMotion());
                 Time.timeScale = 1;
                 GameData.GameOver = false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(0);
             }
         }
     }
