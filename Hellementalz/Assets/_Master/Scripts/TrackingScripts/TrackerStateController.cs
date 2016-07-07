@@ -4,6 +4,9 @@ using System.Collections;
 public class TrackerStateController : MonoBehaviour {
 
     [SerializeField]
+    Transform Enemy;
+
+    [SerializeField]
     ControllerTracker LeftController;
     [SerializeField]
     ControllerTracker RightController;
@@ -12,6 +15,7 @@ public class TrackerStateController : MonoBehaviour {
 
     private float SpellCooldown = 0;
     private float SpellCooldownMax = .5f;
+    public float SpellCooldownMaxPublic { get { return SpellCooldownMax; } }
 
     #region Spells
 
@@ -70,8 +74,24 @@ public class TrackerStateController : MonoBehaviour {
 
             if (FireballSqr(ActiveHand) >= FireballDemand * FireballDemand)
             {
-                Vector3 direction = ActiveHand.TotalMoveV.normalized;
+                Vector3 direction = ActiveHand.TotalMoveV;
                 direction.y = 0;
+
+                /*if (Enemy != null)
+                {
+                    Vector3 playerTargetVector = Enemy.position - ActiveHand.transform.position;
+
+                    //BEWARE! Ugly code, don't show this to your kids...
+                    if (Vector3.Dot(direction, playerTargetVector) > 8)
+                    {
+                        Vector3 oldDir = direction;
+
+                        direction = Vector3.RotateTowards(direction, playerTargetVector, 0.0872665f, 0.2f); //Help up to 5 degrees
+                        direction.y = 0;
+                    }
+                }*/
+
+                direction = direction.normalized;
 
                 if (OffHand.IsTracking && FireballSqr(OffHand) >= (FireballDemand * FireballDemand) / 2)
                 {
@@ -105,5 +125,10 @@ public class TrackerStateController : MonoBehaviour {
 
         LeftController.IsTracking = false;
         RightController.IsTracking = false;
+    }
+
+    private float DotProduct(Vector3 a, Vector3 b)
+    {
+        return a.x * b.x + a.y * b.y + a.z * b.z;
     }
 }

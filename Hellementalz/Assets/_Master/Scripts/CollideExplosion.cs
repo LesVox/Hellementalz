@@ -33,10 +33,8 @@ public class CollideExplosion : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider col){
-
-        Debug.Log("CollideExplosion");
-
+	void OnTriggerEnter(Collider col)
+    {
         if (Vector3.SqrMagnitude(startPosition - transform.position) > 0.1f)
         {
             if (((1 << col.gameObject.layer) & hitLayer) != 0)

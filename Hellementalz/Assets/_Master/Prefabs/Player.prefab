@@ -2222,9 +2222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3991f86d1ab9c4385a44a2748432ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 0}
   LeftController: {fileID: 11499708}
   RightController: {fileID: 11463466}
-  FireballDemand: 0.4
+  FireballDemand: 0.3
   WallOriginOffset: 5
   WallDemand: 0.2
 --- !u!114 &11449836
@@ -2288,7 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b4d03b722972040b4ba8a6c28a1bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHp: 10
+  m_maxHp: 5
   m_hpBar: {fileID: 0}
   m_restartDelay: 9
   m_loseObject: {fileID: 0}

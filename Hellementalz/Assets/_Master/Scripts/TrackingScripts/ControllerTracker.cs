@@ -35,7 +35,7 @@ public class ControllerTracker : MonoBehaviour {
             TrackMovement();
             controller.TriggerHapticPulse();
         }
-        if(controller.GetPressUp(SteamVR_Controller.ButtonMask.Trigger) || TrackerCount >= TrackerCountMax)
+        if(controller.GetPressUp(SteamVR_Controller.ButtonMask.Trigger)/* || TrackerCount >= TrackerCountMax*/)
         {
             IsTracking = false;
             TotalMoveV = Vector3.zero;
